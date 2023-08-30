@@ -1,0 +1,21 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "auto-imports.d.ts", "components.d.ts"],
+  "compilerOptions": {
+    // TODO delete
+    "ignoreDeprecations": "5.0",
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "moduleResolution": "bundler",
+    "paths": {
+      // TODO: delete https://github.com/userquin/unocss-browser-issue
+      "@unocss/preset-icons/browser": ["./node_modules/@unocss/preset-icons/dist/browser"],
+      "@/*": ["./src/*"],
+      "@c/*": ["./src/components/*"],
+      "@v/*": ["./src/views/*"]
+    },
+    // 启用了 “preserveValueImports“ 和 “isolatedModules“ 时，必须使用仅类型导入进行导入
+    "lib": ["ESNext", "DOM"],
+    "types": ["vite/client", "naive-ui/volar"]
+  }
+}

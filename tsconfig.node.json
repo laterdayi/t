@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "include": [
+    "vite.config.*",
+    "src/plugins/vite/index.ts",
+    "src/plugins/vite/unplugin-auto-import.ts",
+    "src/plugins/vite/unplugin-vue-components.ts"
+  ],
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "jsx": "preserve",
+    "composite": true,
+    "module": "ESNext",
+    "types": ["node"]
+  }
+}
